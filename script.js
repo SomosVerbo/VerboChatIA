@@ -70,32 +70,32 @@ document.addEventListener('DOMContentLoaded', () => {
             chips: ['Quais serviços vocês oferecem?', 'Como funciona o processo?', 'Têm cases de sucesso?']
         },
         agencia_consultoria: {
-            title: 'Consultor Digital',
+            title: 'Consultor de Marketing',
             badge: '📊 Agência',
             webhookUrl: `${N8N_BASE}/consultor-marketing`,
-            initialMessage: 'Olá! Sou o consultor digital da <strong>Agência Verbo</strong> para Agências de Marketing. Analiso resultados, identifico gargalos e proponho estratégias de crescimento. Por onde começamos?',
-            chips: ['Como atrair mais leads qualificados?', 'Minha campanha não vende, o que fazer?', 'Como melhorar meu posicionamento?']
+            initialMessage: 'Olá! Sou o especialista em marketing digital da sua agência. Tenho acesso exclusivo ao seu plano de crescimento para tirar dúvidas sobre tráfego, funis e posicionamento. Como posso alavancar seus resultados hoje?',
+            chips: ['Como reduzir o custo por lead nas campanhas?', 'Qual o melhor funil de vendas para meu negócio?', 'Como criar conteúdo que atrai clientes premium?']
         },
         boutique: {
-            title: 'Consultor de Moda',
+            title: 'Personal Stylist',
             badge: '👗 Boutique',
             webhookUrl: `${N8N_BASE}/consultor-moda`,
-            initialMessage: 'Olá! Sou o consultor de estilo da <strong>Agência Verbo</strong> para Boutiques e Moda. Ofereço atendimento personalizado, sugiro looks e identifico oportunidades de upselling. Como posso ajudar?',
-            chips: ['Que estilo se adequa ao meu corpo?', 'Como combinar cores para o inverno?', 'Qual look usar em um evento formal?']
+            initialMessage: 'Olá! Sou o seu consultor de estilo e personal stylist exclusivo. Estou aqui para te dar dicas de moda personalizadas, tirar dúvidas sobre combinações e te ajudar a montar looks perfeitos para qualquer ocasião. Como posso te inspirar hoje?',
+            chips: ['Como combinar uma calça de alfaiataria?', 'Que look usar em um jantar de negócios?', 'Quais cores valorizam meu tom de pele?']
         },
         academia: {
-            title: 'Consultor Fitness',
+            title: 'Treinador Exclusivo',
             badge: '🏋️ Academia',
             webhookUrl: `${N8N_BASE}/consultor-personal`,
-            initialMessage: 'Olá! Sou o consultor fitness da <strong>Agência Verbo</strong>. Prescrevo treinos personalizados, acompanho a evolução dos alunos e ofereço orientação de saúde e performance. Vamos conversar?',
-            chips: ['Como ganhar massa muscular rápido?', 'Qual a melhor rotina para emagrecer?', 'Como manter o foco nos treinos?']
+            initialMessage: 'Olá! Sou o seu treinador e consultor fitness exclusivo. Estou aqui para estruturar seus treinos, tirar dúvidas sobre execução de exercícios e te orientar sobre nutrição e performance. Pronto para evoluir hoje?',
+            chips: ['Pode montar uma divisão de treino de hipertrofia?', 'O que comer no pré e pós-treino para ter energia?', 'Como executar o agachamento de forma segura?']
         },
         triagem: {
-            title: 'Assistente de Triagem',
+            title: 'Assistente de Saúde',
             badge: '🏥 Hospital',
             webhookUrl: `${N8N_BASE}/consultor-triagem`,
-            initialMessage: 'Olá! Sou o assistente de triagem da <strong>Agência Verbo</strong>. Oriento pacientes, avalio urgências e direciono o atendimento de forma ágil e segura. Como posso ajudar?',
-            chips: ['Estou com dor de cabeça forte, o que fazer?', 'Como saber se preciso ir ao pronto-socorro?', 'Quais sintomas indicam uma emergência?']
+            initialMessage: 'Olá! Sou o seu assistente de saúde e triagem digital. Estou aqui para te dar orientações rápidas sobre sintomas, esclarecer dúvidas médicas básicas e te ajudar a identificar se o seu caso precisa de atendimento urgente. O que está sentindo?',
+            chips: ['Estou com enjoo e dor de cabeça forte, o que fazer?', 'Quais sintomas indicam que devo ir ao pronto-socorro?', 'Como aliviar uma dor muscular leve em casa?']
         }
     };
 
