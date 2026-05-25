@@ -252,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const reply = data.reply || data.output || data.text || data.message || 'Mensagem recebida!';
             addMessage(reply, false);
             agentReplyCount++;
-            if (agentReplyCount >= 2) showPostChatCTA();
+            if (agentReplyCount >= 5) showPostChatCTA();
         })
         .catch(() => {
             removeTypingIndicator();
