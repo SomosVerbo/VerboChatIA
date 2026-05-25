@@ -626,19 +626,8 @@ body::after  { background: var(--color-secondary); bottom: -20%; right: -10%; an
 .message-content .md-ol { list-style: decimal; }
 
 .message-content .md-ul li {
-    position: relative;
-    padding-left: 1rem;
     line-height: 1.55;
-}
-.message-content .md-ul li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0.55em;
-    width: 5px;
-    height: 5px;
-    background: var(--color-accent);
-    border-radius: 50%;
+    padding-left: 0.25rem;
 }
 .message-content .md-ol li { line-height: 1.55; padding-left: 0.25rem; }
 
