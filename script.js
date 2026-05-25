@@ -31,70 +31,70 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Assistente de Agendamento',
             badge: '✂️ Barbearia',
             webhookUrl: `${N8N_BASE}/agente-salao`,
-            initialMessage: 'Sou o assistente de atendimento da <strong>Agência Verbo</strong> para Barbearias e Salões. Agendo horários, confirmo reservas e reduzo faltas automaticamente, 24h por dia. Como posso ajudar?',
+            initialMessage: 'Olá! Sou o assistente de atendimento da <strong>Agência Verbo</strong> para Barbearias e Salões. Agendo horários, confirmo reservas e reduzo faltas automaticamente, 24h por dia. Como posso ajudar?',
             chips: ['Qual o valor do corte?', 'Tem horário para hoje?', 'Onde vocês ficam?']
         },
         advocacia: {
             title: 'Assistente Jurídico',
             badge: '⚖️ Advocacia',
             webhookUrl: `${N8N_BASE}/agente-advocacia`,
-            initialMessage: 'Sou o assistente de atendimento da <strong>Agência Verbo</strong> para Escritórios de Advocacia. Qualifico clientes, agendar consultas e triagem de casos de forma inteligente, liberando o seu time para o que importa. Como posso ajudar?',
+            initialMessage: 'Olá! Sou o assistente de atendimento da <strong>Agência Verbo</strong> para Escritórios de Advocacia. Qualifico clientes, agendar consultas e triagem de casos de forma inteligente, liberando o seu time para o que importa. Como posso ajudar?',
             chips: ['Qual o valor da consulta?', 'Atendem direito de família?', 'Onde fica o escritório?']
         },
         clinica: {
             title: 'Assistente Clínico',
             badge: '🩺 Clínica',
             webhookUrl: `${N8N_BASE}/agente-clinica`,
-            initialMessage: 'Sou o assistente de atendimento da <strong>Agência Verbo</strong> para Clínicas. Agendo consultas, reduzo faltas e tiro dúvidas dos seus pacientes de forma automática. Como posso ajudar?',
+            initialMessage: 'Olá! Sou o assistente de atendimento da <strong>Agência Verbo</strong> para Clínicas. Agendo consultas, reduzo faltas e tiro dúvidas dos seus pacientes de forma automática. Como posso ajudar?',
             chips: ['Quais especialidades atendem?', 'Aceitam plano de saúde?', 'Qual o valor da consulta?']
         },
         energia_solar: {
             title: 'Assistente Solar',
             badge: '☀️ Energia Solar',
             webhookUrl: `${N8N_BASE}/agente-energia-solar`,
-            initialMessage: 'Sou o assistente de captação da <strong>Agência Verbo</strong> para Energia Solar. Qualificando leads, apresentando propostas e agendando visitas técnicas automaticamente. Vamos escalar suas vendas?',
+            initialMessage: 'Olá! Sou o assistente de captação da <strong>Agência Verbo</strong> para Energia Solar. Qualificando leads, apresentando propostas e agendando visitas técnicas automaticamente. Vamos escalar suas vendas?',
             chips: ['Qual o valor da instalação?', 'Quanto tempo pra instalar?', 'Em quanto tempo se paga?']
         },
         restaurante: {
             title: 'Assistente Delivery',
             badge: '🍔 Delivery',
             webhookUrl: `${N8N_BASE}/agente-restaurante`,
-            initialMessage: 'Sou o assistente de atendimento da <strong>Agência Verbo</strong> para Food Service. Anoto pedidos, faço upselling e atendo seus clientes direto no WhatsApp, sem depender do iFood. Pronto para explodir suas vendas?',
+            initialMessage: 'Olá! Sou o assistente de atendimento da <strong>Agência Verbo</strong> para Food Service. Anoto pedidos, faço upselling e atendo seus clientes direto no WhatsApp, sem depender do iFood. Pronto para explodir suas vendas?',
             chips: ['Qual o cardápio de hoje?', 'Fazem entrega na minha rua?', 'Qual a taxa de entrega?']
         },
         agencia_vendas: {
             title: 'Assistente B2B',
             badge: '🚀 Agência',
             webhookUrl: `${N8N_BASE}/agente-agencia-marketing`,
-            initialMessage: 'Sou o assistente de captação B2B da <strong>Agência Verbo</strong>. Qualificação de leads automática, agendamento de reuniões e CRM integrado. Qual desafio vamos resolver hoje?',
+            initialMessage: 'Olá! Sou o assistente de captação B2B da <strong>Agência Verbo</strong>. Qualificação de leads automática, agendamento de reuniões e CRM integrado. Qual desafio vamos resolver hoje?',
             chips: ['Quais serviços vocês oferecem?', 'Como funciona o processo?', 'Qual o prazo para ter resultados?']
         },
         agencia_consultoria: {
             title: 'Consultor de Marketing',
             badge: '📊 Agência',
             webhookUrl: `${N8N_BASE}/consultor-marketing`,
-            initialMessage: 'Sou o especialista em marketing digital da sua agência. Tenho acesso exclusivo ao seu plano de crescimento para tirar dúvidas sobre tráfego, funis e posicionamento. Como posso alavancar seus resultados hoje?',
+            initialMessage: 'Olá! Sou o especialista em marketing digital da sua agência. Tenho acesso exclusivo ao seu plano de crescimento para tirar dúvidas sobre tráfego, funis e posicionamento. Como posso alavancar seus resultados hoje?',
             chips: ['Meus anúncios estão ruins, o que pode ser?', 'Como interpretar o relatório do Meta Ads?', 'Por que meu custo por resultado subiu esse mês?']
         },
         boutique: {
             title: 'Personal Stylist',
             badge: '👗 Boutique',
             webhookUrl: `${N8N_BASE}/consultor-moda`,
-            initialMessage: 'Sou o seu consultor de estilo e personal stylist exclusivo. Estou aqui para te dar dicas de moda personalizadas, tirar dúvidas sobre combinações e te ajudar a montar looks perfeitos para qualquer ocasião. Como posso te inspirar hoje?',
+            initialMessage: 'Olá! Sou o seu consultor de estilo e personal stylist exclusivo. Estou aqui para te dar dicas de moda personalizadas, tirar dúvidas sobre combinações e te ajudar a montar looks perfeitos para qualquer ocasião. Como posso te inspirar hoje?',
             chips: ['Como combinar uma calça de alfaiataria?', 'Que look usar em um jantar de negócios?', 'Quais cores valorizam meu tom de pele?']
         },
         academia: {
             title: 'Treinador Exclusivo',
             badge: '🏋️ Academia',
             webhookUrl: `${N8N_BASE}/consultor-personal`,
-            initialMessage: 'Sou o seu treinador e consultor fitness exclusivo. Estou aqui para estruturar seus treinos, tirar dúvidas sobre execução de exercícios e te orientar sobre nutrição e performance. Pronto para evoluir hoje?',
+            initialMessage: 'Olá! Sou o seu treinador e consultor fitness exclusivo. Estou aqui para estruturar seus treinos, tirar dúvidas sobre execução de exercícios e te orientar sobre nutrição e performance. Pronto para evoluir hoje?',
             chips: ['Pode montar uma divisão de treino de hipertrofia?', 'O que comer no pré e pós-treino para ter energia?', 'Como executar o agachamento de forma segura?']
         },
         triagem: {
             title: 'Assistente de Saúde',
             badge: '🏥 Hospital',
             webhookUrl: `${N8N_BASE}/consultor-triagem`,
-            initialMessage: 'Sou o seu assistente de saúde e triagem digital. Estou aqui para te dar orientações rápidas sobre sintomas, esclarecer dúvidas médicas básicas e te ajudar a identificar se o seu caso precisa de atendimento urgente. O que está sentindo?',
+            initialMessage: 'Olá! Sou o seu assistente de saúde e triagem digital. Estou aqui para te dar orientações rápidas sobre sintomas, esclarecer dúvidas médicas básicas e te ajudar a identificar se o seu caso precisa de atendimento urgente. O que está sentindo?',
             chips: ['Preciso marcar uma consulta com urgência', 'Estou com febre há 2 dias, o que devo fazer?', 'Qual especialista devo procurar para dor nas costas?']
         }
     };
