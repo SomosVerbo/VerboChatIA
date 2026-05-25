@@ -285,6 +285,62 @@ document.addEventListener('DOMContentLoaded', () => {
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 
+    // ── Markdown Parser ──
+    function parseMarkdown(text) {
+        // Escape HTML to prevent XSS (preserve existing safe tags from initialMessages)
+        const allowedTags = /<\/?strong>/gi;
+        const savedTags = [];
+        text = text.replace(allowedTags, (match) => {
+            savedTags.push(match);
+            return `\x00SAVED${savedTags.length - 1}\x00`;
+        });
+        text = text
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+        // Restore saved tags
+        text = text.replace(/\x00SAVED(\d+)\x00/g, (_, i) => savedTags[parseInt(i)]);
+
+        // Headers: ### ## #
+        text = text.replace(/^### (.+)$/gm, '<h4 class="md-h4">$1</h4>');
+        text = text.replace(/^## (.+)$/gm,  '<h3 class="md-h3">$1</h3>');
+        text = text.replace(/^# (.+)$/gm,   '<h2 class="md-h2">$1</h2>');
+
+        // Bold and italic
+        text = text.replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>');
+        text = text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+        text = text.replace(/\*(.+?)\*/g,     '<em>$1</em>');
+
+        // Inline code
+        text = text.replace(/`(.+?)`/g, '<code class="md-code">$1</code>');
+
+        // Bullet lists (- item or * item)
+        text = text.replace(/^[\-\*] (.+)$/gm, '<li>$1</li>');
+        text = text.replace(/(<li>[\s\S]*?<\/li>)/g, (block) => `<ul class="md-ul">${block}</ul>`);
+        // Collapse consecutive </ul><ul> 
+        text = text.replace(/<\/ul>\s*<ul class="md-ul">/g, '');
+
+        // Numbered lists
+        text = text.replace(/^\d+\. (.+)$/gm, '<li>$1</li>');
+        text = text.replace(/(<li>[\s\S]*?<\/li>)/g, (block) => {
+            if (block.startsWith('<ul')) return block;
+            return `<ol class="md-ol">${block}</ol>`;
+        });
+        text = text.replace(/<\/ol>\s*<ol class="md-ol">/g, '');
+
+        // Line breaks: double newline = paragraph break, single newline = <br>
+        text = text.replace(/\n\n/g, '</p><p class="md-p">');
+        text = text.replace(/\n/g, '<br>');
+        text = `<p class="md-p">${text}</p>`;
+
+        // Clean up: don't wrap block elements inside <p>
+        text = text.replace(/<p class="md-p">(<h[2-4]|<ul|<ol)/g, '$1');
+        text = text.replace(/(<\/h[2-4]>|<\/ul>|<\/ol>)<\/p>/g, '$1');
+        text = text.replace(/<p class="md-p"><\/p>/g, '');
+
+        return text;
+    }
+
     function addMessage(text, isUser = false) {
         const wrap = document.createElement('div');
         wrap.className = `message ${isUser ? 'user-message' : 'agent-message'}`;
@@ -292,7 +348,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const content = document.createElement('div');
         content.className = 'message-content';
         if (isUser) content.textContent = text;
-        else content.innerHTML = text;
+        else content.innerHTML = parseMarkdown(text);
 
         const time = document.createElement('div');
         time.className = 'message-time';
