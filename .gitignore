@@ -1,0 +1,11 @@
+# Ignore OS files
+desktop.ini
+Thumbs.db
+
+# Google Drive sync files (if any)
+.gdrive*
+icon?
+*conflict*
+
+# Local server files / logs
+*.log

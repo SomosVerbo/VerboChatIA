@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verbo AI | Agente de Atendimento Inteligente</title>
+    <meta name="description" content="Experimente agora um Agente de IA de atendimento para o seu negócio. Desenvolvido pela Agência Verbo — Posicionamento Digital.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg-texture"></div>
+
+    <!-- Floating WhatsApp Button -->
+    <a id="float-whatsapp"
+       href="https://wa.me/5522997650140?text=Ol%C3%A1%21+Acabei+de+testar+o+Agente+de+IA+da+Verbo+e+quero+fazer+um+or%C3%A7amento%21"
+       target="_blank" rel="noopener" title="Falar no WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        <span>Quero um Agente!</span>
+    </a>
+
+    <!-- Lead Capture Modal -->
+    <div id="lead-modal" class="lead-modal hidden">
+        <div class="lead-modal-overlay" id="lead-overlay"></div>
+        <div class="lead-modal-box">
+            <div class="lead-modal-logo">
+                <img src="logo.png" alt="Verbo">
+            </div>
+            <h3 class="lead-modal-title">Quase lá! 🚀</h3>
+            <p class="lead-modal-desc">Deixe seus dados e um consultor entra em contato após o teste. Sem compromisso!</p>
+            <form id="lead-form">
+                <input type="text" id="lead-name" placeholder="Seu nome" autocomplete="name">
+                <input type="tel" id="lead-phone" placeholder="Seu WhatsApp" autocomplete="tel">
+                <div class="lead-form-actions">
+                    <button type="button" id="lead-skip">Pular por agora</button>
+                    <button type="submit" id="lead-submit">Começar o teste →</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <main class="app-container">
+
+        <!-- Hero Section -->
+        <header class="hero-section">
+            <!-- Logo oficial Verbo -->
+            <div class="verbo-logo">
+                <img src="logo.png" alt="Verbo — Posicionamento Digital">
+            </div>
+
+            <div class="hero-text">
+                <div class="brand-badge">
+                    <span class="pulse-dot"></span>
+                    SISTEMA ONLINE
+                </div>
+                <h1 class="main-title">INTELIGÊNCIA<br><span class="neon-text">QUE VENDE.</span></h1>
+                <p class="subtitle">Atendimento autônomo que trabalha 24h, converte mais e custa menos do que um colaborador.</p>
+            </div>
+
+            <!-- Como funciona -->
+            <div class="how-it-works">
+                <div class="how-step">
+                    <span class="step-num">1</span>
+                    <span class="step-label">Escolha o segmento</span>
+                </div>
+                <div class="how-arrow">→</div>
+                <div class="how-step">
+                    <span class="step-num">2</span>
+                    <span class="step-label">Converse com o agente</span>
+                </div>
+                <div class="how-arrow">→</div>
+                <div class="how-step">
+                    <span class="step-num">3</span>
+                    <span class="step-label">Adquira o seu</span>
+                </div>
+            </div>
+
+            <!-- CTA Principal -->
+            <a id="cta-whatsapp"
+               href="https://wa.me/5522997650140?text=Ol%C3%A1%21+Acabei+de+testar+o+Agente+de+IA+da+Verbo+e+quero+fazer+um+or%C3%A7amento+para+o+meu+neg%C3%B3cio%21"
+               target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Quero um Agente para o meu negócio
+            </a>
+
+            <!-- Social Links -->
+            <div class="social-links">
+                <a href="https://www.instagram.com/agenciaverbo" target="_blank" rel="noopener" class="social-btn">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    @agenciaverbo
+                </a>
+                <a href="https://somosverbo.com.br" target="_blank" rel="noopener" class="social-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    somosverbo.com.br
+                </a>
+            </div>
+        </header>
+
+        <!-- Right Column -->
+        <div class="right-col">
+
+            <!-- Benefits chips -->
+            <div class="benefits-compact">
+                <span class="benefit-chip">⚡ Resposta em &lt;10s</span>
+                <span class="benefit-chip">🕐 24h / 7 dias</span>
+                <span class="benefit-chip">📈 Mais vendas, menos custo</span>
+            </div>
+
+            <!-- Segment Selector -->
+            <section class="segment-selector" id="segment-selector">
+                <h2 class="segment-title">QUAL É O SEU NEGÓCIO?</h2>
+
+                <div class="agent-type-tabs">
+                    <button class="type-tab active" data-type="vendas">Vendas &amp; Agendamento</button>
+                    <button class="type-tab" data-type="consultoria">Consultoria</button>
+                </div>
+
+                <div class="segment-group" id="group-vendas">
+                    <div class="segment-cards">
+                        <button class="segment-card" data-segment="barbearia">
+                            <span class="icon">✂️</span>
+                            <strong>Barbearia / Salão</strong>
+                            <span class="card-desc">Agenda horários e reduz faltas</span>
+                        </button>
+                        <button class="segment-card" data-segment="advocacia">
+                            <span class="icon">⚖️</span>
+                            <strong>Escritório de Advocacia</strong>
+                            <span class="card-desc">Qualifica clientes e agenda consultas</span>
+                        </button>
+                        <button class="segment-card" data-segment="clinica">
+                            <span class="icon">🩺</span>
+                            <strong>Clínica</strong>
+                            <span class="card-desc">Agenda, reduz faltas e tria pacientes</span>
+                        </button>
+                        <button class="segment-card" data-segment="energia_solar">
+                            <span class="icon">☀️</span>
+                            <strong>Energia Solar</strong>
+                            <span class="card-desc">Qualifica leads e agenda visitas técnicas</span>
+                        </button>
+                        <button class="segment-card" data-segment="restaurante">
+                            <span class="icon">🍔</span>
+                            <strong>Restaurante / Lanchonete</strong>
+                            <span class="card-desc">Anota pedidos e faz upselling no WhatsApp</span>
+                        </button>
+                        <button class="segment-card" data-segment="agencia_vendas">
+                            <span class="icon">🚀</span>
+                            <strong>Agência de Marketing</strong>
+                            <span class="card-desc">Qualifica leads B2B e agenda reuniões</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="segment-group hidden" id="group-consultoria">
+                    <div class="segment-cards">
+                        <button class="segment-card" data-segment="agencia_consultoria">
+                            <span class="icon">📊</span>
+                            <strong>Agência de Marketing</strong>
+                            <span class="card-desc">Diagnóstico estratégico e planos de crescimento</span>
+                        </button>
+                        <button class="segment-card" data-segment="boutique">
+                            <span class="icon">👗</span>
+                            <strong>Boutique / Moda</strong>
+                            <span class="card-desc">Consultoria de estilo e atendimento personalizado</span>
+                        </button>
+                        <button class="segment-card" data-segment="academia">
+                            <span class="icon">🏋️</span>
+                            <strong>Academia / Personal</strong>
+                            <span class="card-desc">Prescrição inteligente e acompanhamento de alunos</span>
+                        </button>
+                        <button class="segment-card" data-segment="triagem">
+                            <span class="icon">🏥</span>
+                            <strong>Triagem / Hospital</strong>
+                            <span class="card-desc">Triagem de pacientes e orientação médica inicial</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chat Interface -->
+            <section class="chat-container hidden" id="chat-container">
+                <div class="chat-header">
+                    <div class="agent-info">
+                        <div class="agent-avatar">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-4 0V4a2 2 0 0 1 2-2z"></path>
+                                <path d="M5 8h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z"></path>
+                                <path d="M9 14h.01"></path><path d="M15 14h.01"></path><path d="M10 18h4"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="agent-title-row">
+                                <h2 id="agent-title">Assistente Verbo</h2>
+                                <span id="segment-badge" class="segment-badge"></span>
+                            </div>
+                            <span class="status-text">Processando linguagem natural</span>
+                        </div>
+                    </div>
+                    <button id="back-btn" title="Escolher outro segmento">← Voltar</button>
+                </div>
+
+                <div class="chat-messages" id="chat-messages"></div>
+
+                <div class="chips-area hidden" id="chips-area"></div>
+
+                <div class="chat-input-area">
+                    <form id="chat-form">
+                        <input type="text" id="user-input" placeholder="Digite sua mensagem aqui..." autocomplete="off" required>
+                        <button type="submit" id="send-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Testimonials -->
+            <div class="testimonials">
+                <p class="testimonials-label">O que acontece com quem automatiza seus processos:</p>
+                <div class="testimonials-track" id="testimonials-track">
+                    <div class="testimonial-card active">
+                        <p>"Reduzi 80% das faltas na minha clínica em 2 semanas."</p>
+                        <span>— Dr. Marcos, Odontologia</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Minha academia dobrou as matrículas em 30 dias sem contratar ninguém."</p>
+                        <span>— Ana Paula, Fit Studio</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"O agente qualifica os leads antes do meu time falar. Surreal."</p>
+                        <span>— Roberto, Agência de Marketing</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Saí do iFood e criei meu próprio canal. As vendas só crescem."</p>
+                        <span>— Cláudia, Restaurante Sabor Real</span>
+                    </div>
+                </div>
+                <div class="testimonials-dots" id="testimonials-dots">
+                    <button class="dot active" data-idx="0"></button>
+                    <button class="dot" data-idx="1"></button>
+                    <button class="dot" data-idx="2"></button>
+                    <button class="dot" data-idx="3"></button>
+                </div>
+            </div>
+
+        </div><!-- end .right-col -->
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
