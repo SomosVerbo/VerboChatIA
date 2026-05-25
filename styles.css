@@ -139,6 +139,14 @@ body::after  { background: var(--color-secondary); bottom: -20%; right: -10%; an
     text-transform: uppercase;
 }
 .lead-modal-desc { font-size: 0.9rem; color: var(--color-text-dim); margin-bottom: 1.5rem; line-height: 1.6; }
+.lgpd-text {
+    font-size: 0.7rem;
+    color: var(--color-text-dim);
+    line-height: 1.4;
+    text-align: center;
+    margin: 0.2rem 0;
+    opacity: 0.85;
+}
 #lead-form { display: flex; flex-direction: column; gap: 0.75rem; }
 #lead-form input {
     background: transparent;
