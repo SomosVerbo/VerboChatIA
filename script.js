@@ -67,14 +67,14 @@ document.addEventListener('DOMContentLoaded', () => {
             badge: '🚀 Agência',
             webhookUrl: `${N8N_BASE}/agente-agencia-marketing`,
             initialMessage: 'Olá! Sou o assistente de captação B2B da <strong>Agência Verbo</strong>. Qualificação de leads automática, agendamento de reuniões e CRM integrado. Qual desafio vamos resolver hoje?',
-            chips: ['Quais serviços vocês oferecem?', 'Como funciona o processo?', 'Têm cases de sucesso?']
+            chips: ['Quais serviços vocês oferecem?', 'Como funciona o processo?', 'Qual o prazo para ter resultados?']
         },
         agencia_consultoria: {
             title: 'Consultor de Marketing',
             badge: '📊 Agência',
             webhookUrl: `${N8N_BASE}/consultor-marketing`,
             initialMessage: 'Olá! Sou o especialista em marketing digital da sua agência. Tenho acesso exclusivo ao seu plano de crescimento para tirar dúvidas sobre tráfego, funis e posicionamento. Como posso alavancar seus resultados hoje?',
-            chips: ['Como reduzir o custo por lead nas campanhas?', 'Qual o melhor funil de vendas para meu negócio?', 'Como criar conteúdo que atrai clientes premium?']
+            chips: ['Meus anúncios estão ruins, o que pode ser?', 'Como interpretar o relatório do Meta Ads?', 'Por que meu custo por resultado subiu esse mês?']
         },
         boutique: {
             title: 'Personal Stylist',
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
             badge: '🏥 Hospital',
             webhookUrl: `${N8N_BASE}/consultor-triagem`,
             initialMessage: 'Olá! Sou o seu assistente de saúde e triagem digital. Estou aqui para te dar orientações rápidas sobre sintomas, esclarecer dúvidas médicas básicas e te ajudar a identificar se o seu caso precisa de atendimento urgente. O que está sentindo?',
-            chips: ['Estou com enjoo e dor de cabeça forte, o que fazer?', 'Quais sintomas indicam que devo ir ao pronto-socorro?', 'Como aliviar uma dor muscular leve em casa?']
+            chips: ['Preciso marcar uma consulta com urgência', 'Estou com febre há 2 dias, o que devo fazer?', 'Qual especialista devo procurar para dor nas costas?']
         }
     };
 
