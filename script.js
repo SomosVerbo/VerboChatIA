@@ -74,28 +74,28 @@ document.addEventListener('DOMContentLoaded', () => {
             badge: '📊 Agência',
             webhookUrl: `${N8N_BASE}/consultor-marketing`,
             initialMessage: 'Olá! Sou o consultor digital da <strong>Agência Verbo</strong> para Agências de Marketing. Analiso resultados, identifico gargalos e proponho estratégias de crescimento. Por onde começamos?',
-            chips: ['Como funciona a consultoria?', 'Vocês fazem tráfego pago?', 'Qual o valor dos serviços?']
+            chips: ['Como atrair mais leads qualificados?', 'Minha campanha não vende, o que fazer?', 'Como melhorar meu posicionamento?']
         },
         boutique: {
             title: 'Consultor de Moda',
             badge: '👗 Boutique',
             webhookUrl: `${N8N_BASE}/consultor-moda`,
             initialMessage: 'Olá! Sou o consultor de estilo da <strong>Agência Verbo</strong> para Boutiques e Moda. Ofereço atendimento personalizado, sugiro looks e identifico oportunidades de upselling. Como posso ajudar?',
-            chips: ['Quais as novidades da semana?', 'Entregam para todo Brasil?', 'Quais as formas de pagamento?']
+            chips: ['Que estilo se adequa ao meu corpo?', 'Como combinar cores para o inverno?', 'Qual look usar em um evento formal?']
         },
         academia: {
             title: 'Consultor Fitness',
             badge: '🏋️ Academia',
             webhookUrl: `${N8N_BASE}/consultor-personal`,
             initialMessage: 'Olá! Sou o consultor fitness da <strong>Agência Verbo</strong>. Prescrevo treinos personalizados, acompanho a evolução dos alunos e ofereço orientação de saúde e performance. Vamos conversar?',
-            chips: ['Quais são os planos?', 'Tem aula de spinning?', 'Qual o horário de funcionamento?']
+            chips: ['Como ganhar massa muscular rápido?', 'Qual a melhor rotina para emagrecer?', 'Como manter o foco nos treinos?']
         },
         triagem: {
             title: 'Assistente de Triagem',
             badge: '🏥 Hospital',
             webhookUrl: `${N8N_BASE}/consultor-triagem`,
             initialMessage: 'Olá! Sou o assistente de triagem da <strong>Agência Verbo</strong>. Oriento pacientes, avalio urgências e direciono o atendimento de forma ágil e segura. Como posso ajudar?',
-            chips: ['Qual o tempo de espera?', 'Tem médico clínico geral?', 'Quais convênios aceitam?']
+            chips: ['Estou com dor de cabeça forte, o que fazer?', 'Como saber se preciso ir ao pronto-socorro?', 'Quais sintomas indicam uma emergência?']
         }
     };
 
