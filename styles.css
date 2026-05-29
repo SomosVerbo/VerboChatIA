@@ -244,6 +244,8 @@ body::after  { background: var(--color-secondary); bottom: -20%; right: -10%; an
     max-width: 100%;
     height: auto;
     object-fit: contain;
+    /* Converte pixels brancos do logo para #CCFF00 (amarelo-verde da marca) */
+    filter: brightness(0) invert(80%) sepia(65%) saturate(900%) hue-rotate(15deg);
 }
 
 .lead-modal-logo img {
@@ -251,6 +253,7 @@ body::after  { background: var(--color-secondary); bottom: -20%; right: -10%; an
     height: auto;
     display: block;
     margin: 0 auto 0.5rem;
+    filter: brightness(0) invert(80%) sepia(65%) saturate(900%) hue-rotate(15deg);
 }
 
 .hero-text { 
@@ -889,5 +892,21 @@ body::after  { background: var(--color-secondary); bottom: -20%; right: -10%; an
     #lead-form input {
         padding: 0.75rem 0.85rem;
         font-size: 0.88rem;
+    }
+
+    /* Botões do modal na mesma linha sem quebra */
+    .lead-form-actions {
+        gap: 0.5rem;
+    }
+
+    #lead-skip {
+        font-size: 0.75rem;
+        padding: 0.65rem 0.5rem;
+        white-space: nowrap;
+    }
+
+    #lead-submit {
+        font-size: 0.85rem;
+        padding: 0.65rem 0.5rem;
     }
 }
