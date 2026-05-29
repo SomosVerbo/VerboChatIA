@@ -240,16 +240,18 @@ body::after  { background: var(--color-secondary); bottom: -20%; right: -10%; an
 }
 
 .verbo-logo img {
-    width: 160px;
+    width: 200px;
     max-width: 100%;
     height: auto;
     object-fit: contain;
+    filter: invert(1);
     mix-blend-mode: screen;
 }
 
 .lead-modal-logo img {
-    max-width: 140px;
+    max-width: 160px;
     height: auto;
+    filter: invert(1);
     mix-blend-mode: screen;
     display: block;
     margin: 0 auto 0.5rem;
@@ -768,7 +770,7 @@ body::after  { background: var(--color-secondary); bottom: -20%; right: -10%; an
     }
 
     .verbo-logo img {
-        width: 130px;
+        width: 170px;
     }
 
     .brand-badge {
