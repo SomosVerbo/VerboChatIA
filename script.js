@@ -182,6 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
         chatContainer.classList.remove('hidden');
         document.querySelector('.hero-section').classList.add('chat-mode');
         document.querySelector('.right-col').classList.add('chat-mode-right');
+        document.body.classList.add('chat-open');
         chipsActive = true;
         agentReplyCount = 0;
         sessionId = 'demo-' + Math.random().toString(36).slice(2, 10);
@@ -213,6 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
         segmentSelector.classList.remove('hidden');
         document.querySelector('.hero-section').classList.remove('chat-mode');
         document.querySelector('.right-col').classList.remove('chat-mode-right');
+        document.body.classList.remove('chat-open');
         chatMessages.innerHTML = '';
         chipsArea.innerHTML = '';
         chipsArea.classList.add('hidden');
@@ -256,7 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(() => {
             removeTypingIndicator();
-            addMessage('<em style="opacity:0.7">(Agente indisponível no momento. Tente novamente.)</em>', false);
+            addMessage('*(Agente indisponível no momento. Tente novamente.)*', false);
         })
         .finally(() => {
             setProcessing(false);
