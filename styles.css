@@ -1,3 +1,32 @@
+@font-face {
+    font-family: 'RNS Camelia';
+    src: url('fonts/RNSCamelia-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'RNS Camelia';
+    src: url('fonts/RNSCamelia-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'RNS Camelia';
+    src: url('fonts/RNSCamelia-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'RNS Camelia';
+    src: url('fonts/RNSCamelia-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     --bg-dark: #0a0a08;
     --color-primary: #1A1A14;
@@ -5,7 +34,7 @@
     --color-accent: #CCFF00;
     --color-white: #FFFFFF;
     --color-text-dim: rgba(255, 255, 255, 0.6);
-    --font-heading: 'RNS Camelia', 'RNS Carmelia', serif;
+    --font-heading: 'RNS Camelia', serif;
     --font-body: 'Montserrat', sans-serif;
 }
 
@@ -211,15 +240,15 @@ body::after  { background: var(--color-secondary); bottom: -20%; right: -10%; an
 }
 
 .verbo-logo img {
-    width: 180px;
+    width: 240px;
     max-width: 100%;
     height: auto;
     object-fit: contain;
-    mix-blend-mode: screen; 
+    mix-blend-mode: screen;
 }
 
 .lead-modal-logo img {
-    max-width: 160px;
+    max-width: 200px;
     mix-blend-mode: screen;
 }
 
@@ -252,7 +281,7 @@ body::after  { background: var(--color-secondary); bottom: -20%; right: -10%; an
 .main-title {
     font-family: var(--font-heading);
     font-size: clamp(2.2rem, 5vw, 3.5rem);
-    font-weight: 800; line-height: 1.1;
+    font-weight: 900; line-height: 1.05;
     text-transform: uppercase; letter-spacing: -1px;
 }
 .subtitle {
